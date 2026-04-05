@@ -1,8 +1,15 @@
-# 🛒 Mini Cart PRO
+# 🛒 Mini Cart 
 
 A modern mini e-commerce cart application built with **HTML, CSS and Vanilla JavaScript**.
 
 This project demonstrates a fully functional shopping cart system with dynamic UI updates, local storage persistence, and a clean premium dark design.
+
+---
+
+# 🛒 Mini Cart PRO
+
+🚀 **Live Demo:** [https://your-demo-link.com](https://johnyisbackk.github.io/js-mini-cart/)
+
 
 ---
 
@@ -36,13 +43,6 @@ This project demonstrates a fully functional shopping cart system with dynamic U
 - Array methods (`map`, `find`, `filter`, `reduce`)
 - Event delegation
 - LocalStorage API
-
----
-
-## 📸 Preview
-
-<!-- sem môžeš neskôr pridať screenshot -->
-<!-- napr: ![preview](./preview.png) -->
 
 ---
 
