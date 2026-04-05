@@ -7,7 +7,7 @@ This project demonstrates a fully functional shopping cart system with dynamic U
 ---
 
 
-🚀 **Live Demo:** [https://your-demo-link.com](https://johnyisbackk.github.io/js-mini-cart/)
+🚀 **Live Demo:** https://johnyisbackk.github.io/js-mini-cart/
 
 
 ---
