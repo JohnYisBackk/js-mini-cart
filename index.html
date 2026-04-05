@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Mini Cart</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ============================================= -->
+    <!-- PAGE WRAPPER -->
+    <!-- ============================================= -->
+    <div class="page-shell">
+      <!-- ============================================= -->
+      <!-- HEADER -->
+      <!-- ============================================= -->
+
+      <header class="header">
+        <div class="container header-content">
+          <div class="brand">
+            <span class="brand-badge"></span>
+            <div>
+              <p class="brand-label">Premuim Store</p>
+              <h1>Mini Cart</h1>
+            </div>
+          </div>
+
+          <button
+            class="cart-toggle-btn"
+            id="cartToggleBtn"
+            aria-label="Open cart"
+          >
+            <span>Cart</span>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- ============================================= -->
+      <!-- HERO -->
+      <!-- ============================================= -->
+
+      <section class="hero">
+        <div class="container hero-content">
+          <p class="section-label">Modern E-Commerce UI</p>
+          <h2>
+            Build a stylish shopping cart experience with clean dark visuals.
+          </h2>
+          <p class="hero-text">
+            Browse products, add items to cart, update quantity, remove
+            products, calculate totals, and save everything with localStorage.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============================================= -->
+      <!-- MAIN CONTENT -->
+      <!-- ============================================= -->
+      <main class="main-layout container">
+        <!-- PRODUCTS -->
+        <section class="products-section">
+          <div class="section-heading">
+            <p class="section-label">Collection</p>
+            <h3>Featured Products</h3>
+          </div>
+
+          <div class="products-grid" id="productsGrid">
+            <!-- PRODUCT CARD 1 -->
+            <article class="product-card">
+              <div class="product-image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80"
+                  alt="Black T-shirt"
+                  class="product-image"
+                />
+              </div>
+
+              <div class="product-info">
+                <p class="product-category">Apparel</p>
+                <h4 class="product-title">Black Essential Tee</h4>
+                <p class="product-description">
+                  Minimal premium t-shirt with clean silhouette and soft fabric
+                  feel.
+                </p>
+
+                <div class="product-bottom">
+                  <span class="product-price">€29</span>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PRODUCT CARD 2 -->
+            <article class="product-card">
+              <div class="product-image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+                  alt="Sneakers"
+                  class="product-image"
+                />
+              </div>
+
+              <div class="product-info">
+                <p class="product-category">Footwear</p>
+                <h4 class="product-title">Urban Night Sneakers</h4>
+                <p class="product-description">
+                  Clean streetwear sneakers with bold profile and everyday
+                  comfort.
+                </p>
+
+                <div class="product-bottom">
+                  <span class="product-price">€89</span>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PRODUCT CARD 3 -->
+            <article class="product-card">
+              <div class="product-image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
+                  alt="Watch"
+                  class="product-image"
+                />
+              </div>
+
+              <div class="product-info">
+                <p class="product-category">Accessories</p>
+                <h4 class="product-title">Midnight Steel Watch</h4>
+                <p class="product-description">
+                  Elegant dark-tone watch with premium metal details and sharp
+                  design.
+                </p>
+
+                <div class="product-bottom">
+                  <span class="product-price">€149</span>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PRODUCT CARD 4 -->
+            <article class="product-card">
+              <div class="product-image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=900&q=80"
+                  alt="Headphones"
+                  class="product-image"
+                />
+              </div>
+
+              <div class="product-info">
+                <p class="product-category">Audio</p>
+                <h4 class="product-title">Shadow Wireless Headphones</h4>
+                <p class="product-description">
+                  Deep sound, minimalist shape, and premium matte dark finish.
+                </p>
+
+                <div class="product-bottom">
+                  <span class="product-price">€119</span>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- CART SIDEBAR -->
+        <aside class="cart-sidebar" id="cartSidebar">
+          <div class="cart-header">
+            <div>
+              <p class="section-label">Your Cart</p>
+              <h3>Shopping Summary</h3>
+            </div>
+
+            <button
+              class="cart-close-btn"
+              id="cartCloseBtn"
+              aria-label="Close cart"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div class="cart-items" id="cartItems">
+            <!-- Empty State -->
+            <div class="cart-empty">
+              <p>Your cart is empty.</p>
+              <span>Add some premium products to get started.</span>
+            </div>
+          </div>
+
+          <div class="cart-footer">
+            <div class="cart-total-row">
+              <span>Total</span>
+              <strong id="cartTotal">€0</strong>
+            </div>
+
+            <button class="checkout-btn">Checkout</button>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- CHECKOUT MODAL -->
+    <!-- ============================================= -->
+
+    <div class="checkout-modal" id="checkoutModal">
+      <div class="checkout-modal-content">
+        <button class="modal-close-btn" id="modalCloseBtn">X</button>
+
+        <p class="section-label">Checkout</p>
+        <h3>Order Summary</h3>
+
+        <p class="checkout-text">
+          Review your cart and confirm your order to complete this demo checkout
+          flow.
+        </p>
+
+        <button class="checkout-confirm-btn">Confirm Order</button>
+      </div>
+    </div>
+  </body>
+</html>
